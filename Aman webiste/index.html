@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aman Kumar Jha - Business Analyst | Data Analytics Expert">
+    <title>Aman Kumar Jha | Business Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #6366f1;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); box-shadow: 0 4px 30px rgba(0,0,0,0.1); z-index: 1000; }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.75rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; font-family: 'Poppins', sans-serif; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: #0f172a; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+        .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); color: white; padding: 8rem 2rem 4rem; }
+        .hero-container { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+        .hero h1 { font-size: 4.5rem; font-weight: 900; margin-bottom: 1.5rem; font-family: 'Poppins', sans-serif; }
+        .profile-image { width: 400px; height: 400px; border-radius: 50%; object-fit: cover; border: 8px solid rgba(255,255,255,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+        section { padding: 6rem 2rem; }
+        .container { max-width: 1280px; margin: 0 auto; }
+        .section-title { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 3rem; font-family: 'Poppins', sans-serif; }
+        .timeline { position: relative; max-width: 1000px; margin: 0 auto; }
+        .timeline-item { margin-bottom: 3rem; padding: 2.5rem; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 2px solid #e2e8f0; transition: all 0.3s; }
+        .timeline-item:hover { box-shadow: 0 15px 50px rgba(102,126,234,0.15); transform: translateY(-5px); border-color: var(--primary); }
+        .timeline-title { font-size: 1.625rem; font-weight: 800; margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif; }
+        .timeline-company { color: #6366f1; font-weight: 700; font-size: 1.125rem; margin-bottom: 1rem; }
+        .brands-worked { margin-top: 2rem; padding-top: 2rem; border-top: 2px dashed rgba(102,126,234,0.2); }
+        .brands-worked h4 { font-weight: 700; margin-bottom: 1.5rem; color: #475569; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .brands-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1.5rem; }
+        .brand-logo { background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; min-height: 100px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .brand-logo:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 8px 20px rgba(102,126,234,0.15); }
+        .brand-logo img { max-height: 60px; max-width: 100%; object-fit: contain; filter: grayscale(60%); opacity: 0.85; transition: all 0.3s; }
+        .brand-logo:hover img { filter: grayscale(0%); opacity: 1; }
+        .brand-name { font-size: 0.9375rem; font-weight: 700; color: #0f172a; text-align: center; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .skill-card { padding: 2.5rem; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid #e2e8f0; transition: all 0.3s; }
+        .skill-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(102,126,234,0.15); }
+        .skill-card h3 { margin-bottom: 1rem; font-weight: 800; font-size: 1.375rem; color: #0f172a; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .profile-image { width: 280px; height: 280px; }
+            .hero h1 { font-size: 2.5rem; }
+            .brands-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">AKJ</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="secret-sauce.html">Secret Sauce</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div>
+                <h1>Hi, I'm <span style="background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Aman Kumar Jha</span></h1>
+                <p style="font-size: 1.75rem; margin-bottom: 1.5rem; font-weight: 700;">Business Analyst & Data Strategist</p>
+                <p style="font-size: 1.125rem; margin-bottom: 2.5rem; line-height: 1.8; opacity: 0.95;">Transforming complex data into actionable insights and driving strategic impact across 100+ brands</p>
+                <div style="display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 2.5rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.75rem; font-weight: 900; font-family: 'Poppins', sans-serif;">2+</div>
+                        <div style="font-size: 0.9375rem; opacity: 0.9;">Years Experience</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.75rem; font-weight: 900; font-family: 'Poppins', sans-serif;">100+</div>
+                        <div style="font-size: 0.9375rem; opacity: 0.9;">Brands Worked</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.75rem; font-weight: 900; font-family: 'Poppins', sans-serif;">1000+</div>
+                        <div style="font-size: 0.9375rem; opacity: 0.9;">Users Served</div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img src="profile-photo.jpg" alt="Aman Kumar Jha" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1875rem; line-height: 1.8; text-align: center; color: #475569;">MBA graduate specializing in Business Analytics with 2+ years of experience delivering data-driven solutions. Currently serving as Business Analyst at CostMasters, leading product strategy for 1,000+ enterprise users across 100+ brands.</p>
+        </div>
+    </section>
+
+    <section id="experience" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Business Analyst</h3>
+                    <p class="timeline-company">CostMasters • April 2025 - Present</p>
+                    <ul style="list-style: none; padding-left: 0; color: #475569;">
+                        <li style="margin-bottom: 0.875rem; padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Flagship Product Leadership:</strong> Led end-to-end strategic execution for RMPTS as Product Owner, serving 1,000+ enterprise users
+                        </li>
+                        <li style="margin-bottom: 0.875rem; padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">C-Suite Engagement:</strong> Conducted technical POC demonstrations for executive stakeholders
+                        </li>
+                        <li style="margin-bottom: 0.875rem; padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Requirements Engineering:</strong> Authored BRDs and User Stories guiding development teams
+                        </li>
+                        <li style="padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Data Analytics:</strong> Designed custom Excel Dashboards for market volatility analysis
+                        </li>
+                    </ul>
+                    
+                    <div class="brands-worked">
+                        <h4>🏢 Key Brands & Clients Acquired</h4>
+                        <div class="brands-grid">
+                            <div class="brand-logo">
+                                <img src="https://www.ifbappliances.com/media/logo/default/IFB_Logo.png" alt="IFB">
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-name">M Square</div>
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-name">Yoshika<br>Engineering</div>
+                            </div>
+                            <div class="brand-logo">
+                                <img src="https://www.bonfiglioli.com/etc.clientlibs/bonfiglioli/clientlibs/clientlib-base/resources/img/logo.svg" alt="Bonfiglioli">
+                            </div>
+                            <div class="brand-logo">
+                                <img src="https://logos-world.net/wp-content/uploads/2022/02/Adani-Group-Logo.png" alt="Adani">
+                            </div>
+                            <div class="brand-logo">
+                                <img src="https://www.hirschvogel.com/typo3conf/ext/site_package/Resources/Public/Images/hirschvogel-logo.svg" alt="Hirschvogel">
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-name">Kabra<br>Extrusion</div>
+                            </div>
+                            <div class="brand-logo">
+                                <img src="https://www.arvind.com/images/arvind-logo.svg" alt="Arvind">
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-name">Dee Piping</div>
+                            </div>
+                            <div class="brand-logo">
+                                <img src="https://www.milacron.com/themes/custom/milacron/logo.png" alt="Milacron">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Associate Project Manager</h3>
+                    <p class="timeline-company">The Future University • Jan 2024 - Mar 2025</p>
+                    <ul style="list-style: none; padding-left: 0; color: #475569;">
+                        <li style="margin-bottom: 0.875rem; padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Project Leadership:</strong> Orchestrated 4+ EdTech Brands end-to-end execution
+                        </li>
+                        <li style="margin-bottom: 0.875rem; padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Strategic Analysis:</strong> Market trend analysis and competitor benchmarking
+                        </li>
+                        <li style="padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Performance Tracking:</strong> KPI monitoring via Excel Dashboards
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Digital Marketing Specialist</h3>
+                    <p class="timeline-company">DRIM • June 2023 - Aug 2023</p>
+                    <ul style="list-style: none; padding-left: 0; color: #475569;">
+                        <li style="margin-bottom: 0.875rem; padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Campaign Management:</strong> Led data-driven campaigns for Tier-1 clients
+                        </li>
+                        <li style="padding-left: 1.75rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #6366f1; font-weight: bold;">▶</span>
+                            <strong style="color: #0f172a;">Data Strategy:</strong> A/B Testing and audience segmentation for ROI improvement
+                        </li>
+                    </ul>
+                    
+                    <div class="brands-worked">
+                        <h4>🏢 Key Brands & Clients Served</h4>
+                        <div class="brands-grid">
+                            <div class="brand-logo">
+                                <img src="https://logos-world.net/wp-content/uploads/2020/11/Dominos-Logo.png" alt="Domino's">
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-name">Plix</div>
+                            </div>
+                            <div class="brand-logo">
+                                <div class="brand-name">Flipkart<br>Health</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>📊 Data Analytics</h3>
+                    <p style="color: #475569; line-height: 1.8;">Python • SQL • IBM SPSS Modeler • Advanced Excel • Predictive Analytics • Statistical Modeling</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📈 Business Intelligence</h3>
+                    <p style="color: #475569; line-height: 1.8;">Power BI • IBM Cognos • Dashboards • Data Visualization • KPI Tracking • Reporting</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📋 Project Management</h3>
+                    <p style="color: #475569; line-height: 1.8;">JIRA • Agile/Scrum • Requirements Gathering • BRD/User Stories • PowerPoint • Stakeholder Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title" style="color: white;">Let's Connect</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.95;">Open to new opportunities, collaborations, and exciting projects</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div style="padding: 2.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 16px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+                    <h3 style="margin-bottom: 1rem; font-weight: 800;">📧 Email</h3>
+                    <a href="mailto:amangjhadbg@gmail.com" style="color: white; text-decoration: none; font-weight: 600;">amangjhadbg@gmail.com</a>
+                </div>
+                <div style="padding: 2.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 16px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+                    <h3 style="margin-bottom: 1rem; font-weight: 800;">📱 Phone</h3>
+                    <a href="tel:+916201808732" style="color: white; text-decoration: none; font-weight: 600;">+91 6201808732</a>
+                </div>
+                <div style="padding: 2.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 16px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+                    <h3 style="margin-bottom: 1rem; font-weight: 800;">💼 LinkedIn</h3>
+                    <a href="https://linkedin.com/in/aman-jha-58552319b" target="_blank" style="color: white; text-decoration: none; font-weight: 600;">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #0f172a; color: rgba(255,255,255,0.7); padding: 3rem 2rem; text-align: center;">
+        <p style="margin-bottom: 1rem;">&copy; 2026 Aman Kumar Jha. All rights reserved.</p>
+        <p>Designed & Developed with passion for data and innovation.</p>
+    </footer>
+</body>
+</html>
