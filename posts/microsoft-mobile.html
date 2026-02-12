@@ -3,290 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Proposal: Project Keystone | Aman Jha</title>
-    <meta name="description" content="A detailed business case for Microsoft's re-entry into the mobile market as an enterprise-first AI platform.">
+    <title>Case Study: The Third Mobile Category | Aman Jha</title>
+    <meta name="description" content="A strategic business case for Microsoft's re-entry into mobile: The Professional's Phone.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Project Keystone: The Professional's Phone",
+      "@type": "AnalysisNewsArticle",
+      "headline": "Case Study: Why Microsoft Must Build the 'Professional Phone'",
       "author": "Aman Kumar Jha",
-      "genre": "Business Strategy",
+      "genre": "Tech Strategy",
+      "publisher": "Aman Jha Portfolio",
       "datePublished": "2026-02-12",
-      "description": "Strategic roadmap for Microsoft to capture a $15B market share by defining a third mobile category."
+      "description": "An analysis of the $15B opportunity in creating an AI-native mobile device for the enterprise workforce."
     }
     </script>
 
     <style>
-        /* PRO REPORT STYLING */
-        body { background-color: #f8fafc; color: #334155; }
+        /* BLOG POST STYLING */
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Merriweather', serif; line-height: 1.8; }
         
-        .report-container { 
-            max-width: 900px; 
-            margin: 0 auto; 
-            background: white;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-
-        /* HEADER */
-        .report-header {
-            background: #0f172a;
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .report-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #94a3b8;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        h1 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 3rem; 
-            margin-bottom: 1rem; 
-            line-height: 1.1; 
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: #cbd5e1;
-            font-weight: 300;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* CONTENT */
-        .content-body { padding: 4rem 3rem; }
+        /* Layout */
+        .post-container { max-width: 740px; margin: 0 auto; padding: 4rem 1.5rem; }
         
-        @media (max-width: 768px) {
-            .content-body { padding: 2rem 1rem; }
-            h1 { font-size: 2.2rem; }
-        }
-
-        h2 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 2rem; 
-            color: #0f172a; 
-            margin-top: 4rem; 
-            margin-bottom: 1.5rem; 
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 1rem;
-        }
+        /* Typography */
+        h1 { font-family: 'Inter', sans-serif; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 1rem; color: #0f172a; }
+        h2 { font-family: 'Inter', sans-serif; font-size: 1.8rem; font-weight: 700; margin-top: 3.5rem; margin-bottom: 1rem; color: #0f172a; }
+        h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; color: #334155; }
+        p { font-size: 1.15rem; margin-bottom: 1.5rem; color: #334155; }
         
-        h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        /* Hero Section */
+        .hero-meta { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #64748b; margin-bottom: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 2rem; display: flex; gap: 1.5rem; }
+        .hero-tag { background: #e0e7ff; color: #4338ca; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; align-self: center; }
 
-        p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
+        /* Insight Cards */
+        .insight-card { background: #f8fafc; border-left: 4px solid #6366f1; padding: 2rem; margin: 2.5rem 0; border-radius: 0 8px 8px 0; }
+        .insight-label { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 800; color: #6366f1; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem; }
+        .insight-text { font-size: 1.2rem; font-style: italic; font-weight: 500; color: #1e293b; margin: 0; }
+
+        /* Data Grid */
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+        .stat-box { background: #0f172a; color: white; padding: 1.5rem; border-radius: 8px; text-align: center; }
+        .stat-number { font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 700; display: block; color: #818cf8; }
+        .stat-label { font-family: 'Inter', sans-serif; font-size: 0.85rem; opacity: 0.8; }
+
+        /* Comparison Table */
+        .strategy-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; }
+        .strategy-table th { text-align: left; background: #f1f5f9; padding: 1rem; border-bottom: 2px solid #cbd5e1; }
+        .strategy-table td { padding: 1rem; border-bottom: 1px solid #e2e8f0; }
+        .strategy-table tr:hover { background: #f8fafc; }
+
+        /* List Styling */
+        ul { padding-left: 1.5rem; margin-bottom: 2rem; }
+        li { margin-bottom: 0.8rem; }
         
-        li { margin-bottom: 0.8rem; line-height: 1.6; }
-
-        /* SPECIAL ELEMENTS */
-        .callout-box {
-            background: #f1f5f9;
-            border-left: 5px solid #6366f1;
-            padding: 2rem;
-            margin: 2rem 0;
-            font-style: italic;
-            font-size: 1.2rem;
-            color: #334155;
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            font-size: 0.95rem;
-        }
-        .data-table th { background: #1e293b; color: white; padding: 1rem; text-align: left; }
-        .data-table td { border-bottom: 1px solid #e2e8f0; padding: 1rem; }
-        .data-table tr:nth-child(even) { background: #f8fafc; }
-
-        .financial-card {
-            background: #1e293b;
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-        .financial-card h3 { color: #818cf8; margin-top: 0; }
-        .financial-card p { color: #cbd5e1; }
-
-        .risk-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-        .risk-item {
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        .risk-title { font-weight: 800; color: #dc2626; display: block; margin-bottom: 0.5rem; }
-        .mitigation { color: #15803d; font-weight: 600; display: block; margin-top: 0.5rem; }
+        /* Footer */
+        .author-box { background: #f8fafc; padding: 2rem; margin-top: 4rem; border-radius: 12px; display: flex; align-items: center; gap: 1.5rem; border: 1px solid #e2e8f0; }
+        .author-img { width: 60px; height: 60px; border-radius: 50%; background: #ddd; object-fit: cover; }
+        .author-info h4 { font-family: 'Inter', sans-serif; margin: 0; font-size: 1.1rem; }
+        .author-info p { font-size: 0.9rem; margin: 0.2rem 0 0 0; color: #64748b; }
 
     </style>
 </head>
 <body>
 
-    <nav style="background: white; border-bottom: 1px solid #e2e8f0;">
-        <div class="nav-container">
-            <a href="../secret-sauce.html" style="text-decoration: none; font-weight: 700; color: #0f172a;">← Back to Strategy</a>
+    <nav style="border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 100;">
+        <div class="nav-container" style="padding: 1rem 1.5rem; max-width: 740px; margin: 0 auto;">
+            <a href="../secret-sauce.html" style="text-decoration: none; font-weight: 600; font-family: 'Inter', sans-serif; color: #0f172a; font-size: 0.9rem;">← Back to Insights</a>
         </div>
     </nav>
 
-    <div class="report-container">
-        <header class="report-header">
-            <span class="report-label">Confidential Strategic Brief • Feb 2026</span>
-            <h1>Project Keystone: The Third Mobile Category</h1>
-            <p class="subtitle">Repositioning Microsoft's mobile entry not as a competitor, but as the creator of "The Professional's Phone."</p>
+    <article class="post-container">
+        
+        <header>
+            <span class="hero-tag">Strategy Case Study</span>
+            <h1>The $15 Billion Opportunity: Why Microsoft Must Re-Enter Mobile</h1>
+            <div class="hero-meta">
+                <span>By Aman Kumar Jha</span>
+                <span>•</span>
+                <span>Feb 12, 2026</span>
+                <span>•</span>
+                <span>8 min read</span>
+            </div>
         </header>
 
-        <div class="content-body">
-            
-            <p><strong>To: Satya Nadella & Senior Leadership Team</strong><br>
-            <strong>From: Aman Kumar Jha</strong><br>
-            <strong>Subject: Strategic Opportunity for FY27</strong></p>
+        <p>The mobile OS market is arguably the most concentrated monopoly in modern tech history. Apple and Google currently control the digital lives of 5+ billion people. For the last decade, the industry consensus has been that this war is over.</p>
+        
+        <p>Microsoft, specifically, has accepted a role as a "tenant" on these platforms—providing the software (Office, Teams, Copilot) while paying rent to the landlords who own the glass.</p>
+        
+        <p><strong>This analysis argues that the consensus is wrong.</strong> A unique convergence of AI maturity, hardware commoditization, and "app fatigue" has opened a window for a third category of device.</p>
 
-            <p>I am reaching out with a strategic opportunity that repositions Microsoft's previous mobile failure into a transformative success. The goal is to enter the mobile market not as an iPhone competitor, but as the creator of an entirely new category.</p>
-
-            <h2>1. The Problem: A Dangerous Duopoly</h2>
-            <p>The mobile OS market is one of the most concentrated power structures in history. Apple and Google control what 5+ billion people install, access, and use. This creates systemic risks:</p>
-            <ul>
-                <li><strong>Information Control:</strong> Global dependence on two platforms for information flow.</li>
-                <li><strong>Economic Extraction:</strong> A 30% tax on digital transactions with zero alternatives.</li>
-                <li><strong>Innovation Stagnation:</strong> No meaningful competition for over a decade.</li>
-                <li><strong>Geopolitical Vulnerability:</strong> Centralized data risks.</li>
-            </ul>
-            <p>The world needs a third option. But not the one Microsoft tried before.</p>
-
-            <h2>2. Post-Mortem: Why Windows Phone Failed (2010-2017)</h2>
-            <p>Let’s be direct about what went wrong. The strategy was fundamentally flawed because it tried to be "iPhone for Everyone."</p>
-            <ol>
-                <li><strong>The App Gap:</strong> We needed millions of consumer apps. Developers wouldn't build without users; users wouldn't switch without apps.</li>
-                <li><strong>Wrong Positioning:</strong> We competed in the hardest market (Consumer) against entrenched ecosystems.</li>
-                <li><strong>Undifferentiated Value:</strong> There was no clear reason to choose Windows over iOS.</li>
-            </ol>
-            <p><strong>However, the market has shifted.</strong></p>
-
-            <h2>3. The Shift: Why Now?</h2>
-            
-            <h3>A. Consumer Behavior</h3>
-            <p><strong>iPhone Fatigue</strong> is real. Ownership is ubiquitous and no longer signals status. Simultaneously, the <strong>Work-Life Balance Movement</strong> is driving professionals to seek boundaries. A separate work phone is no longer a burden; it is a statement of discipline.</p>
-
-            <h3>B. The AI Trinity</h3>
-            <div class="callout-box">
-                "The next competitive advantage isn't hardware OR software—it's the integration of Hardware + Software + AI."
+        <div class="stat-grid">
+            <div class="stat-box">
+                <span class="stat-number">1.5B</span>
+                <span class="stat-label">Global Knowledge Workers</span>
             </div>
-            <p>Microsoft has the best AI partnership (OpenAI). You have the best Software (Office/Teams). You lack the <strong>Hardware</strong> to unlock the trinity.</p>
-
-            <h2>4. The Strategy: The "Professional's Phone"</h2>
-            <p><strong>Core Positioning:</strong></p>
-            <ul>
-                <li><strong>Apple:</strong> Premium Lifestyle / Status</li>
-                <li><strong>Android:</strong> Mass Market / Budget</li>
-                <li><strong>Microsoft (New):</strong> <span style="color: #6366f1; font-weight: 800;">Professional Focus / Productivity</span></li>
-            </ul>
-
-            <h3>Value Proposition: "The Phone That Means Business"</h3>
-            <p>For professionals who need productivity, security, and separation. What it deliberately <strong>DOESN'T</strong> have is just as important as what it does:</p>
-            <ul>
-                <li>No TikTok, Instagram, or Snapchat.</li>
-                <li>No predatory gaming apps.</li>
-                <li>No "Distraction Economy."</li>
-            </ul>
-            <p>This isn't a bug—it's the feature. <strong>"Distraction-free by design."</strong></p>
-
-            <h2>5. The App Strategy: The Velvet Rope</h2>
-            <p><strong>The Old Problem:</strong> Need 2 million apps.<br>
-            <strong>The New Solution:</strong> Need only 30 essential professional apps.</p>
-            
-            <table class="data-table">
-                <tr>
-                    <th>Category</th>
-                    <th>Essential Apps Strategy</th>
-                </tr>
-                <tr>
-                    <td><strong>Communication</strong></td>
-                    <td>WhatsApp, Signal, Teams, Zoom, Slack</td>
-                </tr>
-                <tr>
-                    <td><strong>Productivity</strong></td>
-                    <td>Office Suite, OneDrive, DocuSign, Adobe</td>
-                </tr>
-                <tr>
-                    <td><strong>Travel/Finance</strong></td>
-                    <td>Uber/Lyft, Airlines, Banking, Amex</td>
-                </tr>
-            </table>
-            <p><strong>The "AI Bridge":</strong> For everything else, Copilot handles the task. You don't need a "Booking.com app" if Copilot can book the hotel for you via browser.</p>
-
-            <h2>6. Go-To-Market: B2B First</h2>
-            <p>We do not sell this in Best Buy next to the Galaxy S25. We sell it in the Boardroom.</p>
-            
-            <ul>
-                <li><strong>Phase 1 (Pilot):</strong> Partner with 10-15 giants (Deloitte, McKinsey, Goldman Sachs). Deploy 5,000 units each.</li>
-                <li><strong>Phase 2 (Expansion):</strong> Sales through IT departments. "Want an Azure discount? Switch your sales fleet to Surface Mobile."</li>
-                <li><strong>Phase 3 (Individual):</strong> Once the "Status Symbol" is established, open sales to individual professionals.</li>
-            </ul>
-
-            <h2>7. Financial Projections (Conservative)</h2>
-            <div class="financial-card">
-                <h3>Investment Required: ~$1.5 Billion</h3>
-                <p>Hardware R&D, OS Optimization, Strategic Marketing. (Significantly lower risk than the $7.2B Nokia acquisition).</p>
-                <hr style="border-color: #475569; margin: 1.5rem 0;">
-                
-                <h3>Revenue Potential (Year 5)</h3>
-                <p><strong>Target:</strong> 15-20 Million Devices Annually (1% of Corporate Workforce)</p>
-                <p><strong>Hardware Rev:</strong> $10.5 - $14 Billion (@ $700 ASP)</p>
-                <p><strong>Ecosystem Rev:</strong> $3 - $5 Billion (Office/Copilot Attach)</p>
-                <h3 style="color: #4ade80; margin-top: 1rem;">Total Opportunity: $13.5 - $19 Billion Annually</h3>
+            <div class="stat-box">
+                <span class="stat-number">30%</span>
+                <span class="stat-label">"App Store Tax" Paid</span>
             </div>
-
-            <h2>8. Risks & Mitigation</h2>
-            <div class="risk-grid">
-                <div class="risk-item">
-                    <span class="risk-title">Risk: "It failed before."</span>
-                    <span class="mitigation">Mitigation: Completely different strategy. B2B vs B2C. Niche vs Mass Market.</span>
-                </div>
-                <div class="risk-item">
-                    <span class="risk-title">Risk: App Ecosystem.</span>
-                    <span class="mitigation">Mitigation: Only need 30 apps. Use Android Emulation as safety net. AI bridges the rest.</span>
-                </div>
-                <div class="risk-item">
-                    <span class="risk-title">Risk: Hardware Manufacturing.</span>
-                    <span class="mitigation">Mitigation: Partner with Dell/HP/Lenovo existing supply chains. Focus on the software differentiator.</span>
-                </div>
+            <div class="stat-box">
+                <span class="stat-number">$15B</span>
+                <span class="stat-label">projected Annual Revenue</span>
             </div>
-
-            <div style="background: #f8fafc; padding: 2rem; margin-top: 4rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <h2 style="margin-top: 0; border: none;">Conclusion: The Window is Open</h2>
-                <p>Satya, you transformed Microsoft by betting big on Cloud and AI when others hesitated. This is the next bold move.</p>
-                <p><strong>The Risk of Inaction:</strong> Apple will eventually fix Siri (2-4 years). If they do, and we have no hardware presence, we cede the AI platform control to them.</p>
-                <p><strong>The Opportunity:</strong> Create the third mobile platform that should have existed. Establish Microsoft as the AI-native mobile leader.</p>
-                <p>I have developed detailed plans on execution, hardware specs, and the AI integration roadmap. I would welcome the opportunity to discuss this further.</p>
-                <p><em>P.S. The world doesn't need another iPhone. It needs a phone that helps professionals do their best work. That's a Microsoft phone worth building.</em></p>
-            </div>
-
         </div>
-    </div>
-    
-    <footer style="text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.9rem;">
-        &copy; 2026 Aman Kumar Jha. Strategic Case Study Portfolio.
-    </footer>
+
+        <h2>1. The "Why Now" Argument</h2>
+        <p>The failure of Windows Phone (2010-2017) haunts Redmond. But post-mortems often confuse <em>execution</em> with <em>timing</em>. Windows Phone failed because it tried to be "iPhone Lite" at a time when consumers wanted Snapchat and Instagram. It died because of the "App Gap."</p>
+        
+        <p>In 2026, three shifts have rendered the App Gap irrelevant:</p>
+        
+        <ul>
+            <li><strong>AI Agents replace Apps:</strong> You no longer need an Expedia app if an AI agent can book the flight via API. The interface is shifting from <em>taps</em> to <em>intent</em>.</li>
+            <li><strong>Digital Minimalism:</strong> Professionals are actively seeking hardware that reduces distraction. The "always-on" nature of iPhone/Android is becoming a bug, not a feature.</li>
+            <li><strong>Enterprise Security:</strong> With the rise of remote work, IT departments are desperate for a device they can fully control, seamlessly integrated with Intune and Entra ID.</li>
+        </ul>
+
+        <div class="insight-card">
+            <span class="insight-label">Key Insight</span>
+            <p class="insight-text">"The next platform war isn't about Hardware OR Software. It is about the Trinity: Hardware + Software + AI. Microsoft owns 2 of the 3. It needs the hardware to close the loop."</p>
+        </div>
+
+        <h2>2. The Solution: "The Professional's Phone"</h2>
+        <p>Microsoft should not build a consumer phone. It should build a <strong>Surface Mobile</strong> device positioned exclusively for the Enterprise.</p>
+        
+        <h3>The Concept</h3>
+        <p>Imagine a matte-black magnesium slab. It runs a stripped-down Windows Core OS. It has no "App Store" in the traditional sense. It comes pre-loaded with the "Essential 30" (Teams, Outlook, Uber, Delta, Banking, Authenticator).</p>
+        
+        <p>Crucially, it features a hardware <strong>"Deep Work Switch."</strong> Flip it, and all notifications cease. The phone becomes purely a tool for output, not input.</p>
+
+        <h3>Strategic Positioning</h3>
+        <table class="strategy-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>iPhone (Apple)</th>
+                    <th>Android (Google)</th>
+                    <th>Surface Mobile (MSFT)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Primary Goal</strong></td>
+                    <td>Engagement / Lifestyle</td>
+                    <td>Data Collection / Ad Rev</td>
+                    <td><strong>Productivity / Output</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>User Identity</strong></td>
+                    <td>"I am Creative"</td>
+                    <td>"I want Customization"</td>
+                    <td><strong>"I am a Professional"</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Killer Feature</strong></td>
+                    <td>iMessage / Camera</td>
+                    <td>Google Assistant</td>
+                    <td><strong>Native Copilot Integration</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. The Financial Case</h2>
+        <p>We do not need to beat the iPhone. We only need to capture the boardroom. The target market is not the teenager; it is the 1.5 billion corporate employees.</p>
+        
+        <h3>Revenue Model</h3>
+        <ul>
+            <li><strong>Hardware:</strong> 15 Million units (1% of global workforce) @ $750 ASP = <strong>$11.25B</strong>.</li>
+            <li><strong>Ecosystem Attach:</strong> Reduced churn on Office 365 and Copilot Pro licenses.</li>
+            <li><strong>CAC (Customer Acquisition Cost):</strong> Near zero. Sales are made via existing B2B contracts ("Bundle 5,000 phones with your Azure renewal").</li>
+        </ul>
+
+        <h2>4. Risks & Mitigation</h2>
+        <p><strong>The "It Failed Before" Objection:</strong><br>
+        The biggest risk is internal PTSD from the Nokia acquisition.
+        <br><em>Mitigation:</em> This is not a mass-market play. It is a niche, high-margin B2B play, similar to the Surface Pro strategy, which is now a multi-billion dollar business.</p>
+
+        <p><strong>The App Ecosystem:</strong><br>
+        Users still need Uber and Banking.
+        <br><em>Mitigation:</em> Microsoft can pay the top 30 B2B app developers directly to maintain PWA (Progressive Web App) versions. For everything else, Android emulation acts as a safety net.</p>
+
+        <h2>Conclusion</h2>
+        <p>Satya Nadella successfully pivoted Microsoft from "Windows First" to "Cloud First" and then "AI First." But an AI-first company that relies on Apple to deliver its intelligence to the end-user is strategically vulnerable.</p>
+        
+        <p>If Apple throttles Copilot, Microsoft loses. The only defense is offense. The world doesn't need another iPhone. It needs a device that respects the user's attention. That is a Microsoft device worth building.</p>
+
+        <div class="author-box">
+            <img src="../profile-photo.jpg" alt="Aman Jha" class="author-img">
+            <div class="author-info">
+                <h4>Aman Kumar Jha</h4>
+                <p>Business Analyst & Strategist • Ex-CostMasters • Focusing on Data-Driven Operations</p>
+            </div>
+        </div>
+
+    </article>
 
 </body>
 </html>
