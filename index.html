@@ -22,6 +22,69 @@
     <meta property="twitter:image" content="https://amanjha.in/profile-photo.jpg">
 
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* FORCE MOBILE RESPONSIVENESS */
+    @media (max-width: 768px) {
+        
+        /* 1. Fix the Huge Text */
+        h1, h1 span {
+            font-size: 2.5rem !important; /* Shrink from 4.5rem to 2.5rem */
+            line-height: 1.2 !important;
+        }
+        p {
+            font-size: 1rem !important; /* Make paragraphs readable */
+        }
+        
+        /* 2. Stack the Hero Section (Image below text) */
+        .hero-container {
+            grid-template-columns: 1fr !important; /* Force single column */
+            display: flex !important;
+            flex-direction: column-reverse; /* Put image on top, text below (or remove reverse to swap) */
+            text-align: center !important;
+            gap: 2rem !important;
+        }
+        
+        /* 3. Resize Profile Photo */
+        .profile-image {
+            width: 250px !important;
+            height: 250px !important;
+            margin: 0 auto !important;
+        }
+        
+        /* 4. Fix Padding & Margins (Stop horizontal scrolling) */
+        section {
+            padding: 3rem 1rem !important; /* Reduce padding from 6rem to 3rem */
+        }
+        .container {
+            padding: 0 1rem !important;
+            width: 100% !important;
+        }
+        
+        /* 5. Fix the "Brands/Logos" Grid */
+        .brands-grid {
+            grid-template-columns: repeat(2, 1fr) !important; /* Show 2 logos per row on mobile */
+            gap: 1rem !important;
+        }
+        
+        /* 6. Ensure Hamburger Menu Appears */
+        .nav-links {
+            display: none; /* Hide desktop links */
+        }
+        .mobile-menu-btn {
+            display: block !important; /* Show hamburger button */
+            font-size: 2rem !important;
+        }
+    }
+    
+    /* GLOBAL FIXES */
+    img {
+        max-width: 100%; /* Prevent logos from overflowing */
+        height: auto;
+    }
+    body {
+        overflow-x: hidden; /* Cut off any side-scrolling */
+    }
+</style>
     </head>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <style>
