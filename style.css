@@ -53,27 +53,23 @@ nav {
     letter-spacing: -1px;
 }
 
-/* This forces the menu to stay horizontal and fit all 6 links */
 .nav-links {
     display: flex !important;
     flex-direction: row !important;
-    gap: 1rem; /* Smaller gap to prevent overflow */
+    gap: 1.25rem; /* Reduced from 2.5rem so all 6 links fit perfectly */
     list-style: none;
     margin: 0;
     padding: 0;
     align-items: center;
 }
 
-.nav-links li {
-    display: inline-block;
-}
-
 .nav-links a {
-    font-size: 0.85rem; /* Smaller font to fit everything on one line */
-    font-weight: 600;
-    text-decoration: none;
     color: var(--dark);
-    white-space: nowrap; /* Prevents text from breaking into two lines */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem; /* Slightly smaller font makes it look much cleaner */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Forces the text to stay on one line */
 }
 
 /* Add this to make the scroll smooth when you click "Projects" */
