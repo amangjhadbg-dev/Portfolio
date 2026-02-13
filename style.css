@@ -53,25 +53,33 @@ nav {
     letter-spacing: -1px;
 }
 
+/* This forces the menu to stay horizontal and fit all 6 links */
 .nav-links {
-    display: flex;
-    gap: 1.2rem; /* Reduced from 2.5rem */
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem; /* Smaller gap to prevent overflow */
     list-style: none;
+    margin: 0;
+    padding: 0;
     align-items: center;
 }
 
-.nav-links a {
-    color: var(--dark);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.85rem; /* Reduced from 0.95rem */
-    transition: color 0.3s ease;
-    position: relative;
-    white-space: nowrap; /* Forces links to stay on one line */
+.nav-links li {
+    display: inline-block;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a {
+    font-size: 0.85rem; /* Smaller font to fit everything on one line */
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark);
+    white-space: nowrap; /* Prevents text from breaking into two lines */
+}
+
+/* Add this to make the scroll smooth when you click "Projects" */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Prevents header from covering the section title */
 }
 
 .mobile-menu-btn {
