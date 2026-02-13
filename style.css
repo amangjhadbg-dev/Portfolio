@@ -76,7 +76,6 @@ nav {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px; /* Prevents header from covering the section title */
-}
 
 .mobile-menu-btn {
     display: none;
