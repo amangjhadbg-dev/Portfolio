@@ -55,27 +55,19 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.2rem; /* Reduced from 2.5rem */
     list-style: none;
+    align-items: center;
 }
 
 .nav-links a {
     color: var(--dark);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem; /* Reduced from 0.95rem */
     transition: color 0.3s ease;
     position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width 0.3s;
-    margin-top: 4px;
+    white-space: nowrap; /* Forces links to stay on one line */
 }
 
 .nav-links a:hover::after {
